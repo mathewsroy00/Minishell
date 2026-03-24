@@ -1,29 +1,31 @@
-🐚 MiniShell – Linux Shell in C
-📌 Overview
+# 🐚 MiniShell – Custom Linux Shell in C
 
-MiniShell is a lightweight Unix-like shell implemented in C that supports command execution, piping, and job control. It demonstrates core system programming concepts like process management and signal handling.
+## 📌 Overview
+MiniShell is a simple Unix-like shell implemented in C. It supports command execution, piping, and job control, demonstrating core system programming concepts.
 
-🚀 Features
-Built-in commands: cd, pwd, echo, exit, jobs, fg, bg
-External command execution using execvp()
-Pipe support (|) for multiple commands
-Job control with foreground/background execution
-Signal handling (Ctrl+C, Ctrl+Z)
-Customizable prompt (PS1)
-🏗️ Structure
-main.c – Entry point
-input.c – Input parsing & signals
-functions.c – Command execution
-shell.h – Definitions
-external.txt – External commands list
-⚙️ Build & Run
+---
+
+## 🚀 Features
+- Built-in commands: `cd`, `pwd`, `echo`, `exit`, `jobs`, `fg`, `bg`
+- Executes external commands using `execvp()`
+- Supports piping (`|`) between multiple commands
+- Job control (foreground & background processes)
+- Signal handling (`Ctrl+C`, `Ctrl+Z`)
+- Custom shell prompt (`PS1` support)
+
+---
+
+## 🏗️ Project Structure
+- `main.c` – Shell entry point
+- `input.c` – Input handling & parsing
+- `functions.c` – Command execution logic
+- `shell.h` – Definitions & declarations
+- `external.txt` – External commands list
+
+---
+
+## ⚙️ Compilation & Run
+```bash
 gcc main.c input.c functions.c -o minishell
 ./minishell
-📚 Concepts Used
-fork(), execvp(), waitpid()
-Pipes & IPC
-Signal handling
-Linked list (job control)
-👨‍💻 Author
-
 Mathews Roy
